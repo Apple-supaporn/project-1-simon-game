@@ -2,6 +2,26 @@ console.log("Sanity Check");
 
 
 //function startGame() : to start the game.
+const colors = {
+    green: 0,
+    red: 1,
+    blue: 2,
+    yellow: 3
+};
+let sequence = [];
+let userSequence = [];
+let gameTurn = [];
+let userTurn = false;
+
+function startGame() {
+    sequence = [];
+    userSequence = [];
+    isGameRunning
+
+
+}
+
+
 //function playSequence() : to plays the sequence of colors and sounds.
 //function highlightColor() : to help with the sequence of the game.
 //function buttonClickHandler() : to be able to follow the sequence. 
@@ -12,3 +32,5 @@ console.log("Sanity Check");
 //function highestScore : to see highest score. 
 //function replyGame() :  to replay game after making a mistake.
 //function muteSound() :  to be able to mute the sound effects
+
+
