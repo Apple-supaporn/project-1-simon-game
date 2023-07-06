@@ -1,1 +1,1 @@
-# project-1-simon-game(https://apple-supaporn.github.io/project-1-simon-game/)
+# [project-1-simon-game](https://apple-supaporn.github.io/project-1-simon-game/)
