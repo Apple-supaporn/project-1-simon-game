@@ -174,6 +174,7 @@ function endGame() {
   highestScore.innerText = `Your Highest Score: ${previousHighestScore}`;
   //console.log(highestScore)
   updateHighestScore(previousHighestScore);
+  refreshThepage(); //refresh the page once end game or game over
 };
 
 function updateScore() {
@@ -219,6 +220,10 @@ function instruction() {
 
 };
 
+
+function refreshThepage() {    //refresh the page 
+  location.reload();
+};
 
 
 
