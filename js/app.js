@@ -43,7 +43,8 @@ const playButton = document.getElementById('playButton');
 const score = document.getElementById('score');
 const highestScore = document.getElementById('highestScore');
 
-let currentScore = 0;
+// let currentScore = 0;
+// let currentHighestScore = 0;
 
 //function to start the game
 function startGame() {    //reset the game from begining
@@ -52,8 +53,9 @@ function startGame() {    //reset the game from begining
   gamePlaying = true;
   userPlaying = false;
   currentScore = 0;
-  score.innertext = `Score: ${currentScore}`;
-  updateHighestScore();
+  currentHighestScore = parseInt(localStorage.getItem("highestScore")) || 0;
+  score.innerText = `Score: 0`;
+  highestScore.innerText = `Your Highest Score: ${currentHighestScore}`;
   startNextRound();   //start first round
 };
 
@@ -70,7 +72,7 @@ function startNextRound() {   //when startNextRound is called
 //function to play the generate sequence
 function playSequence() {
   userPlaying = false                   //stop user input while the sequence is playing
-  let i = 0;
+  let i = 0;                            //set a variable i to keep track of index in the gameSequence
   const intervalId = setInterval(() => {
     const color = gameSequence[i];
     highlightColor(color);              //highlight the current color in the sequence
@@ -151,6 +153,7 @@ function checkSequence() {
   return true;
 }
 
+
 let gameOver = false
 function endGame() {
   if(gameOver){
@@ -159,20 +162,45 @@ function endGame() {
   gamePlaying = false;
   userPlaying = false;
   gameOver = true;
-  updateHighestScore();
+
+  let currentScore = userSequence.length;
+  let previousHighestScore = parseInt(localStorage.getItem("highestScore")) || 0;
+  if(currentScore > previousHighestScore) {
+    previousHighestScore = currentScore;
+    localStorage.setItem("highestScore", previousHighestScore.toString());
+  }
   alert('Game Over!');
+  score.innerText = `Score: 0`;
+  highestScore.innerText = `Your Highest Score: ${previousHighestScore}`;
+  //console.log(highestScore)
+  updateHighestScore(previousHighestScore);
+};
+
+function updateScore() {
+  const currentScore = userSequence.length;
+  if (currentScore > currentHighestScore) {
+    currentHighestScore = currentScore; 
+    localStorage.setItem("highestScore", currentHighestScore.toString());
+  }
+  score.innerText = `Score: ${currentScore}`;
+  highestScore.innerText = `Your Highest Score: ${currentHighestScore}`;
+  //console.log(currentScore);
+};
+
+// function updateHighestScore() {
+//   return parseInt(localStorage.getItem("highestScore")) || 0;
+// };
+
+function updateHighestScore(newScore){
+  // const oldHighscore = parseInt(localStorage.getItem('highestScore')) || 0;
+  if (newScore > currentHighestScore) {
+    currentHighestScore = newScore;
+    localStorage.setItem('highestScore', currentHighestScore.toString()); //to store a value in the browser's local storage  and .toString is to convert the value to a string
+    highestScore.innerText = `Your Highest Score: ${currentHighestScore}`;
+  }
 }
 
 
-function updateScore() {
-  currentScore = gameSequence.length;
-  score.innertext = `Score: ${currentScore}`;
-};
-
-
-function updateHighestScore() {
-
-};
 
 
 function playSound(color) {
@@ -180,9 +208,12 @@ function playSound(color) {
 };
 
 
+
 function muteSound() {
 
 };
+
+
 
 function instruction() {
 
