@@ -19,7 +19,7 @@ if (isNaN(previousHighestScore)){
 }
 let previousHighestScoreEl = document.getElementById("previousHighestScore");
 previousHighestScoreEl.innerText = previousHighestScore.toString();
-
+//let currentScore = previousHighestScore; ///////////////add new
 
 const colors = { green: 0, red: 1, blue: 2, yellow: 3 };  //create an object colors and add value for their corresponding
 let gameSequence = [];    //store the sequence by game
@@ -177,7 +177,8 @@ function endGame() {
   if(currentScore > previousHighestScore) {
     previousHighestScore = currentScore;
     localStorage.setItem("highestScore", previousHighestScore.toString());
-  } else {
+  } 
+  else {
     currentScore = previousHighestScore; //keep the current score equal to the highest score
   }
   alert('Game Over!');
