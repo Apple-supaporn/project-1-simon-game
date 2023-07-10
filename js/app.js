@@ -13,6 +13,13 @@
 //function muteSound() : so user can play in a quiet environment
 //function instruction() : to tell player how to play the game
 
+let previousHighestScore = parseInt(localStorage.getItem("highestScore"));
+if (isNaN(previousHighestScore)){
+  previousHighestScore = 0;
+}
+let previousHighestScoreEl = document.getElementById("previousHighestScore");
+previousHighestScoreEl.innerText = previousHighestScore.toString();
+
 
 const colors = { green: 0, red: 1, blue: 2, yellow: 3 };  //create an object colors and add value for their corresponding
 let gameSequence = [];    //store the sequence by game
@@ -48,6 +55,7 @@ const highestScore = document.getElementById('highestScore');
 
 //function to start the game
 function startGame() {    //reset the game from begining
+  //displayHighestScore()
   gameSequence = [];
   userSequence = [];
   gamePlaying = true;
@@ -165,15 +173,18 @@ function endGame() {
 
   let currentScore = userSequence.length;
   let previousHighestScore = parseInt(localStorage.getItem("highestScore")) || 0;
+
   if(currentScore > previousHighestScore) {
     previousHighestScore = currentScore;
     localStorage.setItem("highestScore", previousHighestScore.toString());
+  } else {
+    currentScore = previousHighestScore; //keep the current score equal to the highest score
   }
   alert('Game Over!');
   score.innerText = `Score: 0`;
   highestScore.innerText = `Your Highest Score: ${previousHighestScore}`;
   //console.log(highestScore)
-  updateHighestScore(previousHighestScore);
+  //updateHighestScore(previousHighestScore);
   refreshThepage(); //refresh the page once end game or game over
 };
 
@@ -201,7 +212,14 @@ function updateHighestScore(newScore){
   }
 }
 
-
+// function displayHighestScore() {
+//   let previousHighestScore = parseInt(localStorage.getItem("highestScore"));
+//   if (isNaN(previousHighestScore)){
+//     previousHighestScore = 0;
+//   }
+//   let previousHighestScoreEl = document.getElementById("previousHighestScore");
+//   previousHighestScoreEl.innerText = previousHighestScore.toString();
+// }
 
 
 function playSound(color) {
@@ -256,9 +274,3 @@ yellowPanel.addEventListener('click', () => {
     handlePanelClick(colors.yellow);
   };
 });
-
-
-
-
-
-
