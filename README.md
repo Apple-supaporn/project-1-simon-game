@@ -1,5 +1,4 @@
-# Simon Game 
-[project-1-simon-game](https://apple-supaporn.github.io/project-1-simon-game/)
+# [Simon Game](https://apple-supaporn.github.io/project-1-simon-game/)
 Simon is a memory game where you have to remember and repeat the sequence of colors.
 
 
