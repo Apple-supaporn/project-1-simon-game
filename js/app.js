@@ -13,6 +13,7 @@ let userSequence = [];    //store the user's sequence input
 let gamePlaying = false;  //flag if the game is playing
 let userPlaying = false;  //flag if user is playing
 let gameOver = false;
+let isMuted = false;
 
 const soundUrls = [
     'https://s3.amazonaws.com/freecodecamp/simonSound1.mp3',  
@@ -43,6 +44,8 @@ const playButton = document.getElementById('playButton');
 //DOM VARIABLE FOR SCORE DISPLAYS
 const score = document.getElementById('score');
 const highestScore = document.getElementById('highestScore');
+
+const instructionPopup = document.getElementById('instructionPopup');
 
 
 
@@ -81,7 +84,9 @@ function playSequence() {
     const intervalId = setInterval(() => {
         const color = gameSequence[i];
         highlightColor(color);                          //highlight the current color in the sequence
-        playSound(color);   
+        if(!isMuted){
+          playSound(color);
+        }   
         console.log('Playing color:', color)            //play the sound
         i++;                                            //move to the next color in the sequence
     
@@ -217,7 +222,9 @@ function updateHighestScore(newScore){
 function handlePanelClick(color) {
     if (userPlaying) { //since userplaying is already being check, the gameplaying check is unnecessery. 
         userSequence.push(color);
-        playSound(color);
+        if(!isMuted){
+          playSound(color);
+        }
         highlightColor(color);
             if(!checkSequence()) {                                         //check if user's sequence is incorrect
             endGame();                                                     //endGame if the user's sequence doesn't match
@@ -233,28 +240,35 @@ function handlePanelClick(color) {
 
 
 function muteSound() {
-  const soundButton = document.getElementById('soundButton')
   const sounds = document.querySelectorAll('audio')
+  isMuted = !isMuted;
+  console.log(isMuted);
 };
 
 
 
 function openInstruction() {
-  const instructionPopup = document.getElementById('instructionPopup');
   instructionPopup.style.display = 'block';
 };
 
 
 
 function closeInstruction() {
-  const instructionPopup = document.getElementById('instructionPopup');
   instructionPopup.style.display = 'none';
 }
 
 
 
 //ADD EVENT LISTENER
-soundButton.addEventListener('click', muteSound);
+soundButton.addEventListener('click', () => {
+  muteSound();
+  if (isMuted) {
+    soundButton.textContent = "Sound Off";
+  } else {
+    soundButton.textContent = "Sound On";
+  }
+});
+
 howtoplayButton.addEventListener('click', openInstruction);
 replayButton.addEventListener('click', startGame);
 playButton.addEventListener('click', startGame);
