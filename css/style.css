@@ -149,9 +149,15 @@ button.active{
 #endGameMessage {
     color: aqua;
     font-size: 24px;
+    margin-top: -10px;
 }
 #replayButton {
     background-color: black;
     color: aqua;
     padding: 10px 20px;
+}
+p {
+    color: aqua;
+    font-family: 'Russo One', sans-serif;
+    font-size: 20px;
 }

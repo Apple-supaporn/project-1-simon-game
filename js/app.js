@@ -174,6 +174,9 @@ function endGame() {
     const gameOverScreen = document.getElementById('gameOver');
     gameOverScreen.style.display = 'block';
 
+    const gameOverScore = document.getElementById('totalScore');
+    gameOverScore.innerText = userSequence.length.toString();
+
     const replayButton = document.getElementById('replayButton');
     replayButton.addEventListener('click', handleReply);
 
@@ -189,6 +192,7 @@ function handleReply() {
   const replayButton = document.getElementById('replayButton');
   replayButton.removeEventListener('click', handleReply);
 }
+
 
 
 function updateHighestScore(newScore){
