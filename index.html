@@ -38,7 +38,7 @@
         <aside>
             <div id="allButtons">
                 <button id="soundButton"> Sound On</button>
-                <button id="howtoplayButton"> How to play </button>
+                <button id="howtoplayButton" onclick="openInstruction()"> How to play </button>
                 <button id="playButton"> Play </button>
             </div>
         </aside>
@@ -49,6 +49,23 @@
         <button id="replayButton"> Replay </button>
     </div>
    
+    <div id="instructionPopup" class="screen">
+        <h1 id="instructionTitle">How to Play</h1>
+        <p id="instructionMessage">
+            Simon is a memory game where you have to remember and repeat the sequence of colors.<br><br>
+            1. Press the 'Play' button to start the game.<br>
+            2. Simon will show a sequence of colors by highlighting them.<br>
+            3. Pay close attention to the sequence.<br>
+            4. After Simon's turn, it will be your turn.<br>
+            5. Repeat the sequence by clicking on the colors in the same order.<br>
+            6. If you make a mistake, the game will be over.<br>
+            7. Challenge yourself to beat your high score and see how far you can go.<br><br>
+            Get ready to exercise your brain and have a blast with Simon!<br>
+            Are you ready? Let's play!
+          </p>
+          <button id="closeInstructionButton" onclick="closeInstruction()">Close</button>
+    </div>
+
     <audio id="sound1" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></audio>
     <audio id="sound2" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></audio>
     <audio id="sound3" src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></audio>

@@ -237,15 +237,23 @@ function muteSound() {
 
 
 
-function instruction() {
-
+function openInstruction() {
+  const instructionPopup = document.getElementById('instructionPopup');
+  instructionPopup.style.display = 'block';
 };
+
+
+
+function closeInstruction() {
+  const instructionPopup = document.getElementById('instructionPopup');
+  instructionPopup.style.display = 'none';
+}
 
 
 
 //ADD EVENT LISTENER
 soundButton.addEventListener('click', muteSound);
-howtoplayButton.addEventListener('click', instruction);
+howtoplayButton.addEventListener('click', openInstruction);
 replayButton.addEventListener('click', startGame);
 playButton.addEventListener('click', startGame);
 

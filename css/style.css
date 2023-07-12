@@ -156,8 +156,41 @@ button.active{
     color: aqua;
     padding: 10px 20px;
 }
+
 p {
     color: aqua;
-    font-family: 'Russo One', sans-serif;
-    font-size: 20px;
+    font-size: 12px;
+}
+#instructionPopup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 500px;
+    max-width: 90%;
+    height: auto;
+    max-height: 90%;
+    overflow-y: auto;
+    display: none;
+}
+#instructionTitle {
+    color: rgb(33, 33, 33);
+    font-size: 24px;
+    margin-top: 0;
+}
+#instructionMessage {
+    color: rgb(33, 33, 33);
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-family: 'Kanit', sans-serif;
+    text-align: left;
+}
+#closeInstructionButton {
+    background-color: black;
+    color: aqua;
+    padding: 10px 20px;
 }
