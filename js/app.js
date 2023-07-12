@@ -46,6 +46,8 @@ const score = document.getElementById('score');
 const highestScore = document.getElementById('highestScore');
 
 const instructionPopup = document.getElementById('instructionPopup');
+const resetHighestScoreButton = document.getElementById('resetHighestScoreButton');
+const quitButton = document.getElementById('quitButton');
 
 
 
@@ -269,8 +271,29 @@ soundButton.addEventListener('click', () => {
   }
 });
 
+function resetHighestScore() {
+  localStorage.removeItem("highestScore");
+  previousHighestScore = 0;
+  previousHighestScoreEl.innerText = previousHighestScore.toString();
+}
+
+function quitGame(){
+  gamePlaying = false;
+  userPlaying = false;
+  gameOver = false;
+
+  const gameOverScreen = document.getElementById('gameOver')
+  gameOverScreen.style.display = 'none';
+
+  score.innerText = 'Score: 0';
+}
+
+
+
 howtoplayButton.addEventListener('click', openInstruction);
+resetHighestScoreButton.addEventListener('click', resetHighestScore)
 replayButton.addEventListener('click', startGame);
+quitButton.addEventListener('click', quitGame);
 playButton.addEventListener('click', startGame);
 
 greenPanel.addEventListener('click', () => {

@@ -7,6 +7,7 @@ h1 {
     color: aqua;
     font-family: 'Russo One', sans-serif;
     padding-top: 20px;
+    
 }
 
 h3 {
@@ -87,17 +88,34 @@ button{
 
 #playButton{
     color: aqua;
-    font-size: x-large;
+    font-size: 24px;
     background-color: #051923;
-    width:180px;
-    height:180px;
+    width:190px;
+    height:190px;
     border-radius: 50%;
     position: absolute;
     z-index: 1;
     transform: translate(-50%, -50%);
-    top: 50%; left: 50%;
+    top: 49.20%; left: 49.75%;
     /* margin-top: 0%; */
     }
+
+
+
+@media (max-width: 600px) {
+    .allPanelColors {
+        margin-right: 6px;
+        margin-top: 6px;
+        width: 150px;
+        height: 150px;
+    }
+    #playButton {
+        width: 120px;
+        height: 120px;
+        font-size: 18px;
+    }
+}
+
 
 #greenPanel.active {
     background-color: rgb(3, 205, 0);
@@ -149,12 +167,14 @@ button.active{
 #endGameMessage {
     color: aqua;
     font-size: 24px;
-    /* margin-top: -10px; */
+    margin-top: -10px;
 }
-#replayButton {
+#replayButton, #quitButton {
     background-color: black;
     color: aqua;
     padding: 10px 20px;
+    margin-top: 5px;
+    width: 120px;
 }
 
 p {
@@ -194,3 +214,4 @@ p {
     color: aqua;
     padding: 10px 20px;
 }
+
