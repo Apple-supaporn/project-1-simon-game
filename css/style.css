@@ -149,7 +149,7 @@ button.active{
 #endGameMessage {
     color: aqua;
     font-size: 24px;
-    margin-top: -10px;
+    /* margin-top: -10px; */
 }
 #replayButton {
     background-color: black;

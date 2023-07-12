@@ -177,17 +177,27 @@ function endGame() {
   const replayButton = document.getElementById('replayButton');
   replayButton.addEventListener('click', handleReply);
 
-  score.innerText = `Score: 0`;
+  replayButton.addEventListener('click', () => {
+    replayButton.removeEventListener('click', handleReply);
+    score.innerText = 'Score: 0';
+    handleReply();
+  })
 };
 
 
 
 function handleReply() {
   startGame();
+
+  const gameOverMessage = document.getElementById('endGameMessage');
+  gameOverMessage.innerText = "";
+
   const gameOverScreen = document.getElementById('gameOver');
   gameOverScreen.style.display = 'none';
+
   const replayButton = document.getElementById('replayButton');
   replayButton.removeEventListener('click', handleReply);
+
 }
 
 
