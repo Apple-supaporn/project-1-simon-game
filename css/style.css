@@ -50,7 +50,7 @@ h3 {
     height: 250px;
     transition: background-color 0.2s ease-in-out;
 }
-#centerCircle {
+/* #centerCircle {
     width: 200px;
     height: 200px;
     border-radius: 100px;
@@ -58,8 +58,8 @@ h3 {
     position: absolute;
     top: 39%;
     left: 44.5%;
-}
-#simonBaseBg {
+} */
+/* #simonBaseBg {
     width: 555px;
     height: 555px;
     background-color: black;
@@ -68,7 +68,7 @@ h3 {
     top: 20.85%;
     left: 35.25%;
     z-index: -1;
-}
+} */
 
 #allButtons{
     margin-top: 2%;
@@ -91,12 +91,12 @@ button{
     background-color: #051923;
     width:180px;
     height:180px;
-    border-radius: 100%;
+    border-radius: 50%;
     position: absolute;
     z-index: 1;
     transform: translate(-50%, -50%);
-    top: 49%; left: 49.70%;
-    margin-top: 0%;
+    top: 50%; left: 50%;
+    /* margin-top: 0%; */
     }
 
 #greenPanel.active {
@@ -130,4 +130,28 @@ button.active{
     padding-top: 3%;
     font-family: 'Russo One', sans-serif;
     color: aqua;
+}
+#gameOver {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    background-color: #023047;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#endGameMessage {
+    color: aqua;
+    font-size: 24px;
+}
+#replayButton {
+    background-color: black;
+    color: aqua;
+    padding: 10px 20px;
 }
