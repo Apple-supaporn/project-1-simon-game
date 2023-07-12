@@ -140,7 +140,8 @@ function playSound(color) {
 function checkSequence() {
   for (let i = 0; i < userSequence.length; i++) {
       if(userSequence[i] !== gameSequence[i]) {
-      return false;                                     //return false immediately when userSequence doesn't match with gameSequence. 
+        console.log('Sequence Index', i, 'Correct Color', gameSequence[i], 'User Clicked', userSequence[i])
+        return false;                                     //return false immediately when userSequence doesn't match with gameSequence. 
       }
   }
   return true;
@@ -232,7 +233,8 @@ function handlePanelClick(color) {
 
 
 function muteSound() {
-
+  const soundButton = document.getElementById('soundButton')
+  const sounds = document.querySelectorAll('audio')
 };
 
 
