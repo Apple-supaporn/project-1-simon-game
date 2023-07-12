@@ -161,26 +161,23 @@ function updateScore() {
 
 
 function endGame() {
-    if(gameOver){
-        return;
-    }
-    gamePlaying = false;
-    userPlaying = false;
-    gameOver = true;
+  if(gameOver){
+      return;
+  }
+  gamePlaying = false;
+  userPlaying = false;
+  gameOver = true;
 
-    const gameOverMessage = document.getElementById('endGameMessage');
-    gameOverMessage.innerText = "GAME OVER";
+  const gameOverMessage = document.getElementById('endGameMessage');
+  gameOverMessage.innerText = "GAME OVER";
 
-    const gameOverScreen = document.getElementById('gameOver');
-    gameOverScreen.style.display = 'block';
+  const gameOverScreen = document.getElementById('gameOver');
+  gameOverScreen.style.display = 'block';
 
-    const gameOverScore = document.getElementById('totalScore');
-    gameOverScore.innerText = userSequence.length.toString();
+  const replayButton = document.getElementById('replayButton');
+  replayButton.addEventListener('click', handleReply);
 
-    const replayButton = document.getElementById('replayButton');
-    replayButton.addEventListener('click', handleReply);
-
-    score.innerText = `Score: 0`;
+  score.innerText = `Score: 0`;
 };
 
 
