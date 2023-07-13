@@ -2,20 +2,16 @@ body {
     background-color: #023047;
     text-align: center;
 }
-
 h1 {
     color: aqua;
     font-family: 'Russo One', sans-serif;
-    padding-top: 20px;
-    
+    padding-top: 20px; 
 }
-
 h3 {
     color: aqua;
     font-family: 'Kanit', sans-serif;
     padding-bottom: 40px;
 }
-
 .allPanelColors {
     display: inline-block;
     margin-right: 12px;
@@ -28,7 +24,6 @@ h3 {
     width: 250px;
     height: 250px;
     transition: background-color 0.2s ease-in-out;
-
 }
 #redPanel {
     background-color: red;
@@ -51,30 +46,9 @@ h3 {
     height: 250px;
     transition: background-color 0.2s ease-in-out;
 }
-/* #centerCircle {
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
-    background-color: black;
-    position: absolute;
-    top: 39%;
-    left: 44.5%;
-} */
-/* #simonBaseBg {
-    width: 555px;
-    height: 555px;
-    background-color: black;
-    border-radius: 100%;
-    position: absolute;
-    top: 20.85%;
-    left: 35.25%;
-    z-index: -1;
-} */
-
 #allButtons{
     margin-top: 2%;
 }
-
 button{
     background-color: #051923;
     color: aqua;
@@ -85,7 +59,6 @@ button{
     font-family: 'Russo One', sans-serif;
     margin-right: 5px;
 } 
-
 #playButton{
     color: aqua;
     font-size: 24px;
@@ -97,11 +70,7 @@ button{
     z-index: 1;
     transform: translate(-50%, -50%);
     top: 49.20%; left: 49.75%;
-    /* margin-top: 0%; */
     }
-
-
-
 @media (max-width: 600px) {
     .allPanelColors {
         margin-right: 6px;
@@ -115,8 +84,6 @@ button{
         font-size: 18px;
     }
 }
-
-
 #greenPanel.active {
     background-color: rgb(3, 205, 0);
     box-decoration-break: clone;-webkit-box-decoration-break: clone;box-shadow: 0px 0px 20px 8px green;
@@ -136,7 +103,6 @@ button{
 button.active{
     font-size: 18.5px;
 }
-
 #highestScore {
     font-size: 20px;
     padding-top: 0.5%;
@@ -176,7 +142,6 @@ button.active{
     margin-top: 5px;
     width: 120px;
 }
-
 p {
     color: aqua;
     font-size: 12px;
