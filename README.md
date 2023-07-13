@@ -3,8 +3,8 @@ Simon is a memory game where you have to remember and repeat the sequence of col
 
 ## Screenshots
 <img src="/assets/images/simon-wireframe.png" alt="Wireframe" width="635" height="480">
-<img src="/assets/images/simon-actualgame-start.png" alt="ActualGame-Start" width="565" height="435">
-<img src="/assets/images/simon-actualgame-endgame.png" alt="ActualGame-EndGame" width="569" height="435">
+<img src="/assets/images/simon-actualgame-start.png" alt="ActualGame-Start" width="835" height="965">
+<img src="/assets/images/simon-actualgame-endgame.png" alt="ActualGame-EndGame" width="835" height="969">
 
 ## Technologies Used
 - HTML
