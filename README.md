@@ -2,7 +2,7 @@
 Simon is a memory game where you have to remember and repeat the sequence of colors and sounds. It was originally released by Milton Bradley in 1978 and has since become a timeless favorite.
 
 ## Screenshots
-<img src="/assets/images/simon-wireframe.png" alt="Wireframe" width="835" height="680">
+<img src="/assets/images/simon-wireframe.png" alt="Wireframe" width="635" height="480">
 <img src="/assets/images/simon-actualgame-start.png" alt="ActualGame-Start" width="530" height="570">
 <img src="/assets/images/simon-actualgame-endgame.png" alt="ActualGame-EndGame" width="530" height="570">
 
