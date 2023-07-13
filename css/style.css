@@ -83,7 +83,7 @@ button{
     border-radius: 8px;
     cursor: pointer;
     font-family: 'Russo One', sans-serif;
-    
+    margin-right: 5px;
 } 
 
 #playButton{

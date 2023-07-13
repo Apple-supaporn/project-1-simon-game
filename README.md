@@ -1,6 +1,10 @@
-# [Simon Game](https://apple-supaporn.github.io/project-1-simon-game/)
-Simon is a memory game where you have to remember and repeat the sequence of colors.
+# Simon Game
+Simon is a memory game where you have to remember and repeat the sequence of colors and sounds. It was originally released by Milton Bradley in 1978 and has since become a timeless favorite.
 
+## Screenshots
+![Wireframe](/assets/images/simon-wireframe.png)
+![Actual Game : Start](/assets/images/simon-actualgame-start.png)
+![Actual Game](/assets/images/simon-actualgame-endgame.png)
 
 ## Technologies Used
 - HTML
@@ -21,3 +25,8 @@ Follow the instruction below to play the game:
 Have fun and test your memory skills!
 
 ## Next Steps
+- Add more colors to increase the difficulty and variety. 
+- Implement responsive media style to adjuct the game for different screen sizes and browsers. 
+- Improve the user interface and design for a more visually appealing game. 
+
+Your contributions and ideas are always welcome!

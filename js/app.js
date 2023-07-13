@@ -64,6 +64,7 @@ function startGame() {    //reset the game from begining
     highestScore.innerText = `Your Highest Score: ${currentHighestScore}`;
     console.log('Game satrted')
     startNextRound();
+    playButton.innerText = "";
 };
 
 
@@ -259,22 +260,11 @@ function closeInstruction() {
   instructionPopup.style.display = 'none';
 }
 
-
-
-//ADD EVENT LISTENER
-soundButton.addEventListener('click', () => {
-  muteSound();
-  if (isMuted) {
-    soundButton.textContent = "Sound Off";
-  } else {
-    soundButton.textContent = "Sound On";
-  }
-});
-
 function resetHighestScore() {
   localStorage.removeItem("highestScore");
   previousHighestScore = 0;
   previousHighestScoreEl.innerText = previousHighestScore.toString();
+  highestScore.innerText = `Your Highest Score: ${previousHighestScore}`;
 }
 
 function quitGame(){
@@ -286,10 +276,19 @@ function quitGame(){
   gameOverScreen.style.display = 'none';
 
   score.innerText = 'Score: 0';
+  playButton.innerText = "Play";
 }
 
 
-
+//ADD EVENT LISTENER
+soundButton.addEventListener('click', () => {
+  muteSound();
+  if (isMuted) {
+    soundButton.textContent = "Sound Off";
+  } else {
+    soundButton.textContent = "Sound On";
+  }
+});
 howtoplayButton.addEventListener('click', openInstruction);
 resetHighestScoreButton.addEventListener('click', resetHighestScore)
 replayButton.addEventListener('click', startGame);
