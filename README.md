@@ -27,6 +27,7 @@ Have fun and test your memory skills!
 ## Next Steps
 - Add more colors to increase the difficulty and variety. 
 - Implement responsive media style to adjuct the game for different screen sizes and browsers. 
-- Improve the user interface and design for a more visually appealing game. 
+- Improve the user interface and design for a more visually appealing game.
+- Add the wrong sound when the user makes a mistake.
 
 Your contributions and ideas are always welcome!
