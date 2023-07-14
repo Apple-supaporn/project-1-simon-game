@@ -64,7 +64,7 @@ function startGame() {
   score.innerText = `Score: 0`;
   highestScore.innerText = `Your Highest Score: ${currentHighestScore}`;
   startNextRound();
-  playButton.innerText = "";
+  playButton.innerText = "SIMON";
 };
 
 
