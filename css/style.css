@@ -177,7 +177,7 @@ button.active{
         border-radius: 50%;
         transform: translate(-50%, -50%);
         position: absolute;
-        top: 27.5%;
+        top: 40%;
     }
     button {
         font-size: 12px;
